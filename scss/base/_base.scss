@@ -3,3 +3,11 @@
 @import 'mixin';
 @import 'function';
 
+img {
+  max-width:100%;
+}
+body {
+  font-size:$font-stack;
+  margin:0;
+  padding:0;
+}
