@@ -1,3 +1,10 @@
+//box-model
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model; // Safari <= 5
+     -moz-box-sizing: $box-model; // Firefox <= 19
+          box-sizing: $box-model;
+}
+
 // border radius
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
@@ -17,6 +24,7 @@
   background: -ms-linear-gradient(top, $start-color 0%,$end-color 100%);
   background: linear-gradient(top bottom, $start-color 0%,$end-color 100%);
 }
+//links
 @mixin links ($link, $visited, $hover, $active) {
     & {
         color: $link;
@@ -30,4 +38,22 @@
             color: $active;
         }
     }
+}
+//clearfix
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+//Absolute center
+@mixin acenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

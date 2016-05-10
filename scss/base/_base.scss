@@ -7,7 +7,14 @@ img {
   max-width:100%;
 }
 body {
-  font-size:$font-stack;
+  font-family:$font-stack;
   margin:0;
   padding:0;
+  overflow: hidden;
+  font-size:16px;
+}
+*,
+*:after,
+*:before {
+  @include box-sizing(border-box);
 }
