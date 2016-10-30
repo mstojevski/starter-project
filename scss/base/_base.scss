@@ -3,18 +3,21 @@
 @import 'mixin';
 @import 'function';
 
-img {
-  max-width:100%;
-}
 body {
-  font-family:$font-stack;
-  margin:0;
-  padding:0;
-  overflow: hidden;
-  font-size:16px;
+	font: $font-size $font-stack
 }
-*,
-*:after,
-*:before {
-  @include box-sizing(border-box);
+
+html,
+body {
+	overflow-x: hidden;
+	text-rendering: optimizeLegibility
+}
+
+img {
+	max-width: 100%;
+	vertical-align: middle
+}
+
+p {
+	line-height: 145%
 }
