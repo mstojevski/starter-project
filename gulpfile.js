@@ -21,6 +21,14 @@ gulp.task('serve', function() {
     });
 });
 
+gulp.task('php-sync', function() {
+  browserSync.init({
+    proxy: "http://localhost/"
+  });
+});
+
+
+
 gulp.task('watch', function () {
   gulp.watch('scss/**/*.scss', ['sass']);
   gulp.watch('./*.html').on('change', browserSync.reload);
