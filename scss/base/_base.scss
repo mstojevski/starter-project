@@ -1,23 +1,59 @@
-@import 'font-family';
-@import 'color';
-@import 'mixin';
-@import 'function';
+@import "../../node_modules/reset-css/sass/reset";
+@import "font-family";
+@import "color";
+@import "mixin";
+@import "function";
 
 body {
-	font: $font-size $font-stack
+  font: $font-size $font-stack;
 }
 
 html,
 body {
-	overflow-x: hidden;
-	text-rendering: optimizeLegibility
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  font-size: 44px;
+  color: $color-text;
+}
+
+h2 {
+  font-size: 32px;
+  color: $color-text;
+}
+
+h3 {
+  font-size: 24px;
+  color: $color-text;
+}
+
+.type-large {
+  font-size: 20px;
+}
+
+.type-small {
+  font-size: 14px;
+}
+
+.type-micro {
+  font-size: 12px;
 }
 
 img {
-	max-width: 100%;
-	vertical-align: middle
+  max-width: 100%;
+  vertical-align: middle;
 }
 
 p {
-	line-height: 145%
+  line-height: 145%;
+  color: $color-text;
+}
+section {
+  padding: 80px 0;
+}
+img[alt=""],
+img:not([alt]) {
+  border: 5px dashed #c00;
 }
